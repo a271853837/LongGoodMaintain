@@ -7,6 +7,8 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -18,10 +20,20 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
+@Component
 public class YwUser implements Serializable {
 
     private static final long serialVersionUID=1L;
 
+    public YwUser(){
+        System.out.println("YwUser构造函数");
+    }
+
+    @Bean
+    public YwUser getYwUser(){
+        System.out.println("YwUser注入");
+        return new YwUser();
+    }
     /**
      * 用户ID
      */
