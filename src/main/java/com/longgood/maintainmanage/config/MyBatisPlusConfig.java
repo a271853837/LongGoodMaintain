@@ -1,4 +1,4 @@
-package com.longgood.maintainmanage;
+package com.longgood.maintainmanage.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.slf4j.Logger;
